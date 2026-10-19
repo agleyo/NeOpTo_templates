@@ -1,0 +1,128 @@
+% https://2023.ccneuro.org/papers.php
+% 
+% Annual CCN conference
+% Sample LaTeX Two-Page Summary -- Proceedings Format
+% based on the prior cognitive science style file
+
+% Original : Ashwin Ram (ashwin@cc.gatech.edu)       04/01/1994
+% Modified : Johanna Moore (jmoore@cs.pitt.edu)      03/17/1995
+% Modified : David Noelle (noelle@ucsd.edu)          03/15/1996
+% Modified : Pat Langley (langley@cs.stanford.edu)   01/26/1997
+% Latex2e corrections by Ramin Charles Nakisa        01/28/1997 
+% Modified : Tina Eliassi-Rad (eliassi@cs.wisc.edu)  01/31/1998
+% Modified : Trisha Yannuzzi (trisha@ircs.upenn.edu) 12/28/1999 (in process)
+% Modified : Mary Ellen Foster (M.E.Foster@ed.ac.uk) 12/11/2000
+% Modified : Ken Forbus                              01/23/2004
+% Modified : Eli M. Silk (esilk@pitt.edu)            05/24/2005
+% Modified : Niels Taatgen (taatgen@cmu.edu)        10/24/2006
+% Modified : David Noelle (dnoelle@ucmerced.edu)     11/19/2014
+% Modified : Konrad Kording (koerding@gmail.com)     2/15/2017
+% Modified : Thomas Naselaris (tnaselar@gmail.com)   3/18/2022
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage{neopto_ccn_like}
+\usepackage{lipsum}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{pslatex}
+\usepackage{apacite}
+
+\title{ Paper bicolumn template title}
+ 
+\author{{\large \bf Xxxxxxxx XXXXXX (xxxxxxxx@univ-amu.fr)} \\
+  Institut de Neurosciences de la Timone (UMR 7289)\\
+  CNRS/Aix-Marseille Université, 27, boulevard Jean Moulin\\
+Marseille, 13005 France
+  \AND {\large \bf Xxxxxxx XXXXXXX (xxxxxxx@univ-amu.fr)} \\
+  Institut de Neurosciences de la Timone (UMR 7289)\\
+  CNRS/Aix-Marseille Université, 27, boulevard Jean Moulin\\
+Marseille, 13005 France}
+
+
+
+
+\begin{document}
+
+\maketitle
+
+
+\section{Abstract}
+{\bf
+\lipsum[1-2]
+}
+\begin{quote}
+\small
+\textbf{Keywords:} 
+Wwwwwwwwww; Xxxxxxxxxxxx; Yyyyyyyyyyyyy; Zzzzzzzzzzz
+\end{quote}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=.5\textwidth]{Logos/grid_display.png}
+\end{center}
+\caption{\lipsum[1-2]} 
+\label{fig:1}
+\end{figure}
+
+
+
+\section{Introduction}
+
+\lipsum[1-2] 
+
+
+\section{Methods}
+
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=.49\textwidth]{Logos/grid_display.png}
+\end{center}
+\caption{\lipsum[1]
+} 
+\label{fig:2}
+\end{figure}
+
+\subsection{Subsection 1}
+
+\lipsum[1]
+
+\subsection{Subsection 2} 
+
+\lipsum[1]
+
+\subsection{Subsection 3}
+
+\lipsum[1]
+
+
+\section{Results}
+
+\subsection{Subsection 1}
+
+\lipsum[1]
+
+\subsection{Subsection 2}
+
+\lipsum[1]
+
+
+
+\section{Conclusion}
+\lipsum[1-3]
+
+% \newpage
+\section{Acknowledgments}
+
+\lipsum[1]
+
+
+\bibliographystyle{apacite}
+
+\setlength{\bibleftmargin}{.125in}
+\setlength{\bibindent}{-\bibleftmargin}
+
+\bibliography{retino}
+
+
+\end{document}

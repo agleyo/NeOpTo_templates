@@ -1,0 +1,194 @@
+%!TeX TS-program = Lualatex
+%!TeX encoding = UTF-8 Unicode
+%!TeX spellcheck = en
+% -*- coding: UTF-8; -*-
+%!BIB TS-program = biber
+% vim: set fenc=utf-8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% https://github.com/martinhelso/uioposter %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Class options                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Orientation:                             %
+% portrait (default), landscape            %
+%                                          % 
+% Paper size:                              %
+% a0paper (default), a1paper, a2paper,     %
+% a3paper, a4paper, a5paper, a6paper       %
+%                                          %
+% Language:                                %
+% english (default), norsk                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[portrait]{utils_poster}
+%\usepackage[utf8]{inputenc}
+\usepackage[position=top]{subfig} 
+\usepackage{lipsum}
+\usepackage[absolute, overlay]{textpos}            % Figure placement
+\setlength{\TPHorizModule}{\paperheight}
+\setlength{\TPVertModule}{\paperwidth}
+
+\usepackage[backend=biber,style=authoryear,natbib=true, doi=true,url=false, isbn=false]{biblatex} 
+%\addbibresource{FastAndCurious.bib}
+%\addbibresource{retinotopy.bib}
+% EN FAIT TU PEUX METTRE PLUSIEURS SOURCES...
+ \addbibresource{new.bib}
+
+\title{Your poster Title}
+
+\author
+{
+%    \item 
+%        \vspace{-75pt}
+        Xxxxxxxx XXXXXX%\inst{1}
+        \and
+        Xxxxxxxx XXXXXX%\inst{1}
+        \and
+%    \item
+        Xxxxxxxx XXXXXX%\inst{1}
+}
+%% Optional:
+\institute
+{
+% \item   %\inst{1} 
+    {\it Institut de Neurosciences de la Timone}, CNRS / Aix-Marseille Université, Marseille, France
+
+}
+% Or:
+%\institute{Contact information}
+
+%logo
+%% Remove footline:
+\setbeamertemplate{footline}[text line]{%
+  \parbox{\linewidth}{\vspace{-5.5cm} \color{black}
+Poster presented at \lipsum[1][1] }}
+
+\begin{document}
+%\begin{frame}
+\begin{columns}[onlytextwidth]
+
+
+\begin{column}{0.35\textwidth - .5cm}
+    \begin{block}{I. }
+        \begin{small}
+            \lipsum[1]
+        \end{small}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=1\linewidth]{Logos/grid_display.png}
+            \caption{\centering \lipsum[1][1]}
+            \label{fig:1}
+            \vspace{-.5cm}
+        \end{figure}
+    \end{block}
+
+
+    \begin{block}{II. }
+
+        \begin{figure}[H]
+            \includegraphics[width=.5\linewidth]{Logos/grid_display.png}
+            \caption{\lipsum[1][1]}
+            \label{fig:2}
+        \end{figure}
+        
+        \begin{small}
+            \lipsum[1]
+        \end{small}
+
+    \end{block}
+   
+\end{column}
+
+\begin{column}{0.33\textwidth - .5cm}
+
+    \begin{block}{III.}
+        \begin{small}
+            \lipsum[1]
+        \end{small}
+    
+        \begin{figure}
+            \centering
+            \includegraphics[width=.8\linewidth]{Logos/grid_display.png}
+            \caption{\lipsum[1][1]}
+            \label{fig:3}
+        \end{figure}
+
+
+    \end{block}
+
+    \begin{block}{IV. }
+    
+        \begin{small}
+            \lipsum[1]
+        \end{small}
+    
+        \begin{figure}
+            \includegraphics[width=.5\linewidth]{Logos/grid_display.png}
+            \caption{\lipsum[1][1]}
+            \label{fig:4}
+        \end{figure}
+    
+    \end{block}
+
+\end{column}
+
+
+\begin{column}{0.33\textwidth - .5cm}
+
+    \begin{block}{V. }
+        \begin{small}
+            \lipsum[1]
+        \end{small}
+
+        \begin{table}
+            \begin{center}
+                \resizebox{.8\textwidth}{!}{ %   
+                \begin{tabular}{|c||c|c||c|c|}
+                \hline
+                 & \multicolumn{2}{|c||}{{\sc XXXX}} & \multicolumn{2}{|c|}{{\sc XXXX}} \\
+            
+                 \hline
+                   & \multicolumn{1}{|c|}{YYYY} & \multicolumn{1}{|c||}{ZZZZ} & \multicolumn{1}{|c|}{YYYY}  & \multicolumn{1}{|c|}{ZZZZ}\\
+                \hline
+                \hline
+            
+                ZZZZZ &  0 & {\bf 1} & 0 & {\bf 1}\\
+                \hline
+                \end{tabular}
+                }
+            \end{center}
+        \end{table}
+
+    \end{block}
+
+    \begin{block}{VI. }
+    
+        \begin{small}
+            \lipsum[1]
+        \end{small}
+        
+        \begin{figure}
+            \includegraphics[width=1\linewidth]{Logos/grid_display.png}
+            \caption{\lipsum[1][1]}
+            \label{fig:5}
+        \end{figure}
+    
+    \end{block}
+
+    \vspace{.15cm}
+
+    \begin{block}{VII. }
+        %----------------------------------------------------------------------------------------
+        %	BIBLIOGRAPHY
+        %----------------------------------------------------------------------------------------
+        \renewcommand*{\bibfont}{\normalfont\fontsize{20}{12}\selectfont}
+        \color{uiored}
+        \vspace{.8cm}
+    
+    \end{block}
+\end{column}
+
+
+\end{columns}
+
+
+\end{document}
